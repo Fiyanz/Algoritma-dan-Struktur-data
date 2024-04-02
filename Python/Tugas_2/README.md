@@ -14,7 +14,8 @@
 
 ### Flowchart menghitung nilai rata rata
 **Img Flowchart**
-link img
+
+![](https://github.com/Fiyanz/Algoritma-dan-Basis-data/blob/main/img/Flowchat_rata-rata.png)
 
 
 ### Pseudo Code menghitung rata rata
@@ -37,7 +38,8 @@ belum ada mah
 
 ### Flowchart menghitung nilai akhir
 **Img Flowchart**
-link img
+
+![](https://github.com/Fiyanz/Algoritma-dan-Basis-data/blob/main/img/flowchart_nilai_akhir.png)
 
 
 ### Pseudo Code
