@@ -20,7 +20,30 @@
 
 ### Pseudo Code menghitung rata rata
 ```
-belum ada mah
+Algoritma Menghitung Rata-Rata
+
+Start/Mulai
+    deklarasi variabel:
+        nama string
+        nim int
+        nilaiTugas1, nilaiTugas2, nilaiTugas3: int | float
+        nilaiRataRata float
+
+    Input:
+        nama
+        nim
+        nilaiTugas1
+        nilaiTugas2
+        nilaiTugas3
+
+    Proses:
+        nilaiRataRata = (nilaiTugas1 + nilaiTugas2 + nilaiTugas3) / 3
+
+    Output:
+        nama
+        nim
+        nilaiRataRata
+End/Selesai
 ```
 
 
@@ -44,5 +67,28 @@ belum ada mah
 
 ### Pseudo Code
 ```
-menyusul
+Algoritma Menghitung Nilai Akhir Siswa
+
+Mulai
+    Deklarasi variabel:
+        nama: string
+        nilaiKeaktifan, nilaiTugas, nilaiUjian: int
+        nilaiAkhir: float
+
+    Input:
+        nama
+        nilaiKeaktifan
+        nilaiTugas
+        nilaiUjian
+
+    Proses:
+        nilaiKeaktifan = nilaiKeaktifan * 0.2
+        nilaiTugas = nilaiTugas * 0.5
+        nilaiUjian = nilaiUjian * 0.3
+        nilaiAkhir = nilaiKeaktifan + nilaiTugas + nilaiUjian
+
+    Output:
+        nama
+        nilaiAkhir
+Selesai
 ```

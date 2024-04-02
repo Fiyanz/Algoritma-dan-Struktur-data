@@ -4,9 +4,9 @@ def nilai(keaktifan: int | float, tugas: int | float, ujian: int | float) -> int
     nilai tugas * dengan 50%
     nilai ujian * dengan 30%
     """
-    nilai_keaktifan = keaktifan * (20/100)
-    nilai_tugas = tugas * (50/100)
-    nilai_ujian = ujian * (30/100)
+    nilai_keaktifan = keaktifan * 0.2
+    nilai_tugas = tugas * 0.5
+    nilai_ujian = ujian * 0.3
 
     return nilai_keaktifan, nilai_tugas, nilai_ujian
 
