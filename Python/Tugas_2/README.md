@@ -8,7 +8,7 @@
 4. Memasukan nilai tugas 1
 5. Memasukan nilai tugas 2
 6. Memasukan nilai tugas 3
-7. Menghitung rata rata nilai mahasiswa
+7. Menghitung rata rata dari nilai tugas 1 tambah tugas 2 tambah tugas 3 kemudia dibagi 3
 8. Menampilkan nilai rata rata mahasiswa
 9. Program selesai
 
@@ -54,7 +54,7 @@ End/Selesai
 3. Memasukan nilai murni keaktifan
 4. Memasukan nilai murni tugas
 5. Memasukan nilai murni ujian
-6. Proses menghitung nilai keaktifan, tugas, ujian
+6. Proses menghitung nilai dengan menambahkan nilai keaktifan, tugas, ujian
 7. Proses menghitung nilai akhir
 8. menampilkan nilai akhir
 9. Selesai
