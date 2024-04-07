@@ -12,7 +12,7 @@
     - untuk golongan 1 akan mendapat tunjangan 5%
     - golongan 2 akan mendapat tunjangan 10%
     - dan golongan 3 akan mendapat tunjangan 15%
-    - jika slah satu karyawan ada dalam goongan maka akan di kalikan dengan gaji pokok (300000 * 10%)
+    - jika slah satu karyawan ada dalam goongan maka akan di kalikan (gaji pokok * dengan jumlah tunjangan)
 9. Proses menghitung tunjangan pendidikan:
     - tunjangan pendidikan pokok bernilai 300,000
     - cara menghitung (gaji pokok * dengan jumlah tunjangan)
