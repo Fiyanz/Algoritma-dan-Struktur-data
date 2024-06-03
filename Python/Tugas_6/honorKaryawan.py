@@ -1,0 +1,2 @@
+from kelas import Karyawan
+
