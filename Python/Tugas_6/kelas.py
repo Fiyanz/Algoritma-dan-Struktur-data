@@ -45,10 +45,11 @@ class Mahasiswa():
 
 # class untuk karyawan
 class Karyawan:
-    
+    __honor = 5000
     def __init__(self, nama: str, jamKerja: int) -> None:
         self.nama = nama
         self.jamKerja = jamKerja
+        Karyawan.__honor = 5000
 
     def getNama(self):
         return self.nama
@@ -56,11 +57,14 @@ class Karyawan:
     def getJamKerja(self):
         return self.jamKerja
     
+    @classmethod
     def getLembur(self, lembur):
         return lembur - self.jamKerja
     
     def honorLembur(self):
+        pass
         
-        
-    def getHonor(self):
-        return 15000
+    
+    # @property
+    # def honor(self):
+    #     return self.__honor
