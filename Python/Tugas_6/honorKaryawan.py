@@ -2,48 +2,77 @@
 import os
 import string
 import random
+from prettytable import PrettyTable
+
+
+# head dari table
+tabelMahasiswa = PrettyTable(['Nim', 'Nama Mahasiswa', 'Nilai UTS', 'Nilai UAS', 'Nilai Akhir', 'Nilai Huruf'])
 
 # template dict mahasiswa
 mahasiswa_template = {
 	'nama':'nama',
 	'nim':'00000000',
-	'sks_lulus':0,
+	'nilai_uts': 0,
+	'nilai_uas': 0,
+	'nilai_akhir': 0,
+	'nilai_huruf': None
 }
 
 data_mahasiswa = {}
 
+# fungsi menghitung nilai nilai
+def nilai(nilai_uts: int | float, nilai_uas: int | float) -> float:
+	return ((nilai_uas * (40/100)) + (nilai_uts * (40/100)))
+
+# fungsi untuk mengambalikan nilai karakter
+def nilaiH(nilaiAkhir) -> str:
+	if nilaiAkhir >= 80:
+		return 'A'
+	elif nilaiAkhir >= 70:
+		return 'B'
+	elif nilaiAkhir >= 56:
+		return 'C'
+	elif nilaiAkhir >= 47:
+		return 'D'
+	else:
+		return 'D'
+
 while True:
 	# os.system("cls") # untuk windows
 	os.system("clear")
-	print(f"{'SELAMAT DATANG':^20}")
-	print(f"{'DATA MAHASISWA':^20}")
-	print("-"*20)
 
 	mahasiswa = dict.fromkeys(mahasiswa_template.keys())
 	mahasiswa['nama'] = input("Nama Mahasiswa: ")
 	mahasiswa['nim'] = input("NIM Mahasiswa: ")
-	mahasiswa['sks_lulus'] = int(input("SKS Lulus: "))
+	mahasiswa['nilai_uts'] = int(input("Nilai UTS: "))
+	mahasiswa['nilai_uas'] = int(input("Nilai UAS: "))
+	nilaiAkhir = nilai(mahasiswa['nilai_uts'], mahasiswa['nilai_uas'])
+	mahasiswa['nilai_akhir'] = nilaiAkhir
+	nilaiHuruf = nilaiH(nilaiAkhir=nilaiAkhir)
+	mahasiswa['nilai_huruf'] = nilaiHuruf
+
+
 
 	KEY = ''.join((random.choice(string.ascii_uppercase) for i in range(6)))
 	data_mahasiswa.update({KEY:mahasiswa})
 
-	# dari tutorial sebelumnya, hilangkan beasiswa
-	print(f"\n{'KEY':<6} {'Nama':<17} {'NIM':<8} {'SKS Lulus':<10}")
-	print('-'*60)
+	
 
 	for mahasiswa in data_mahasiswa:
 		KEY = mahasiswa
 		
 		NAMA = data_mahasiswa[KEY]['nama']
 		NIM = data_mahasiswa[KEY]['nim']
-		SKS = data_mahasiswa[KEY]['sks_lulus']
+		UTS = data_mahasiswa[KEY]['nilai_uts']
+		UAS = data_mahasiswa[KEY]['nilai_uas']
+		NAKHIR = data_mahasiswa[KEY]['nilai_akhir']
+		NHURUF = data_mahasiswa[KEY]['nilai_huruf']
 
-		
-		print(f"{KEY:<6} {NAMA:<17} {NIM:<8} {SKS:^10}")
+		tabelMahasiswa.add_row([NIM, NAMA, UTS, UAS, NAKHIR, NHURUF])	
 
+	print(tabelMahasiswa)
+	
 	print("\n")
 	is_done = input("Mau tambah lagi (y/n)? ")
 	if is_done == "n":
 		break
-
-print("\nAkhir dari program, terima kasih")

@@ -1,7 +1,6 @@
 from kelas import Mahasiswa
 from prettytable import PrettyTable
 
-
 jumlah = int(input("Masukan banyak data yang ingin dimasukan: "))
 
 mahasiswa_lists = []
