@@ -20,25 +20,35 @@ temperatur = data['Temperature']
 temp_list = temperatur.tolist()
 
 def main():
-    mulai = time.time()
     # Bubbel short
+    # mulai = time.time()
     # data_shorted = bubbel.bubble_sort(temp_list) # clasik bubbel short
-    # data_shorted = bubbel.concurrent_bubble_sort(temp_list) # concurrency 214.47
+    
+    # # data_shorted = bubbel.concurrent_bubble_sort(temp_list) # concurrency 214.47
+
+    # selesai = time.time()
+    # lama_waktu_merge = selesai - mulai
+
+    # print(f"lama eksekusi merge sort: {lama_waktu_merge : .2f}s")
 
     # Merge Short
-    data_shorted = merge.merge_sort(temp_list) #0.35s
+    mulai = time.time()
+    merge.merge_sort(temp_list) #0.35s
+    selesai = time.time()
+    lama_waktu_merge = selesai - mulai
+
+    print(f"lama eksekusi merge sort: {lama_waktu_merge : .2f}s")
+
 
     # Quick Short
-    # data_shorted = quick.quick_sort(temp_list, 0, len(temp_list) - 1) # 0.67 s
+    mulai = time.time()
+    quick.quick_sort(temp_list, 0, len(temp_list) - 1) # 0.67 s
     selesai = time.time()
+    lama_waktu_quick = selesai - mulai
 
+    print(f"lama eksekusi quick short: {lama_waktu_quick: .2f}s")
 
-    lama_waktu = selesai - mulai
-
-    print(data_shorted)
-
-    print(f"lama eksekusi: {lama_waktu: .2f}s")
-
+    # print(data_shorted)
 
 
 if __name__ == "__main__":
